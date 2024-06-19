@@ -8,7 +8,7 @@ Ce projet a pour but la visualisation de données sur Elasticsearch. L'instance 
 ## Fichiers
 * [insert.py](https://github.com/caphey/elasticsearch-docker/blob/main/insert.py) : Ce script est responsable de la récupération des données à partir d'une API et de leur insertion dans l'instance Elasticsearch. Il utilise la bibliothèque requests pour récupérer les données et la bibliothèque elasticsearch pour interagir avec l'instance Elasticsearch.
 
-## Comment ça marche
+## Comment ça marche ?
 Le script [insert.py](https://github.com/caphey/elasticsearch-docker/blob/main/insert.py) se connecte d'abord à l'instance Elasticsearch en utilisant l'URL de l'hôte fournie. Il récupère ensuite les données de l'API à `https://recherche-entreprises.api.gouv.fr/search`. Les données sont paginées, donc le script détermine d'abord le nombre total de pages en utilisant la fonction [get_total_pages](https://github.com/caphey/elasticsearch-docker/blob/main/insert.py). Il parcourt ensuite chaque page, récupère les données et les insère dans l'instance Elasticsearch en utilisant la fonction [result_per_page](https://github.com/caphey/elasticsearch-docker/blob/main/insert.py).
 
 ## Exécution du projet
